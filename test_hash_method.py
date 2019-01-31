@@ -25,7 +25,7 @@ import time
 
 
 RANDOM_STRING_FILE = "random_str/ascii_random_str"
-HASH_SIZE = 2**22
+HASH_SIZE = 2**30
 BATCH_SIZE = 200
 
 
@@ -51,6 +51,7 @@ def test_hash(hash_func):
 	# result = hash_method(input=random_str, num_buckets=HASH_SIZE, name="test_hash")
 	print("Num of random string is {}".format(len(random_str)))
 	print("Hash size is {}".format(HASH_SIZE))
+	print("HASH_SIZE / NUMS_RANDOM_STR is {}".format(HASH_SIZE / nums))
 
 	x_input_str = placeholder(dtype=tf_string, shape=[None, ], name='input_str')
 	result = hash_func(input=x_input_str, num_buckets=HASH_SIZE, name="test_hash")
