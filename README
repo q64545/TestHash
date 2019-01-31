@@ -1,0 +1,148 @@
+exp @1
+    Num of unique random string is 9086367
+    Hash size is 1048576
+
+    func @1 tf.string_to_hash_bucket_fast
+
+        Calculate time is 11.6317679882s
+        Conflict nums is 8037991
+        Conflict rate is 0.884620993187
+
+    func @2 pino_hash_op
+
+        Calculate time is 12.8425891399s
+        Conflict nums is 8038002
+        Conflict rate is 0.884622203792
+
+    func @3 basic_hash_op
+
+        @BKDRHash
+            Calculate time is 12.0634701252s
+            Conflict nums is 8037962
+            Conflict rate is 0.884617801592
+
+        @SDBMHash
+            Calculate time is 11.683193922s
+            Conflict nums is 8037978
+            Conflict rate is 0.884619562472
+
+        @RSHash
+            Calculate time is 11.8271329403s
+            Conflict nums is 8037955
+            Conflict rate is 0.884617031207
+
+        @APHash
+            Calculate time is 14.6870570183s
+            Conflict nums is 8037965
+            Conflict rate is 0.884618131757
+
+        @JSHash
+            Calculate time is 11.9153380394s
+            Conflict nums is 8038023
+            Conflict rate is 0.884624514946
+
+        @DEKHash
+            Calculate time is 12.0011000633s
+            Conflict nums is 8038009
+            Conflict rate is 0.884622974177
+
+        @FNVHash
+            Calculate time is 11.3874430656s
+            Conflict nums is 8037958
+            Conflict rate is 0.884617361372
+
+        @DJBHash
+            Calculate time is 11.671847105s
+            Conflict nums is 8038034
+            Conflict rate is 0.884625725551
+
+        @DJB2Hash
+            Calculate time is 12.435874939s
+            Conflict nums is 8037993
+            Conflict rate is 0.884621213297
+
+        @PJWHash
+            Calculate time is 12.2058038712s
+            Conflict nums is 8893854
+            Conflict rate is 0.978812984331
+
+        @ELFHash
+            Calculate time is 11.6762731075s
+            Conflict nums is 8893854
+            Conflict rate is 0.978812984331
+
+        @JAVAHash
+            Calculate time is 11.9837682247s
+            Conflict nums is 8038023
+            Conflict rate is 0.884624514946
+
+
+exp @2
+    Num of unique random string is 9086367
+    Hash size is 4194304
+
+    func @1 tf.string_to_hash_bucket_fast
+
+        Calculate time is 12.3803920746s
+        Conflict nums is 5374471
+        Conflict rate is 0.591487334817
+
+    func @2 pino_hash_op
+
+        Calculate time is 11.3727741241s
+        Conflict nums is 5374926
+        Conflict rate is 0.591537409836
+
+    func @3 basic_hash_op
+
+        @BKDRHash
+            Calculate time is 12.016065836s
+            Conflict nums is 5372267
+            Conflict rate is 0.591244773626
+
+        @SDBMHash
+        @RSHash
+        @APHash
+        @JSHash
+        @DEKHash
+        @FNVHash
+        @DJBHash
+        @DJB2Hash
+        @PJWHash
+        @ELFHash
+        @JAVAHash
+
+
+exp @3
+    Num of random string is 9086367
+    Hash size is 536870912
+
+    func @1 tf.string_to_hash_bucket_fast
+
+        Calculate time is 59.2581110001s
+        Conflict nums is 86887
+        Conflict rate is 0.00956234763575
+
+    func @2 pino_hash_op
+
+        Calculate time is 56.0408639908s
+        Conflict nums is 87083
+        Conflict rate is 0.00958391841316
+
+    func @3 basic_hash_op
+
+        @BKDRHash
+        @SDBMHash
+        @RSHash
+        @APHash
+        @JSHash
+        @DEKHash
+        @FNVHash
+        @DJBHash
+        @DJB2Hash
+        @PJWHash
+        @ELFHash
+        @JAVAHash
+
+
+
