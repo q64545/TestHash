@@ -4,11 +4,17 @@ exp @1
     Hash size is 1048576
     HASH_SIZE / NUMS_RANDOM_STR is 0.115390794848
 
-    func @1 tf.string_to_hash_bucket_fast
+    func @0 tf.string_to_hash_bucket_fast
 
         Calculate time is 11.6317679882s
         Conflict nums is 8037991
         Conflict rate is 0.884620993187
+
+    func @1 tf.string_to_hash_bucket_strong
+
+        Calculate time is 11.0532441139s
+        Conflict nums is 8038816
+        Conflict rate is 0.884633415104
 
     func @2 pino_hash_op
 
@@ -84,11 +90,17 @@ exp @2
     Hash size is 4194304
     HASH_SIZE / NUMS_RANDOM_STR is 0.461563179392
 
-    func @1 tf.string_to_hash_bucket_fast
+    func @0 tf.string_to_hash_bucket_fast
 
         Calculate time is 12.3803920746s
         Conflict nums is 5374471
         Conflict rate is 0.591487334817
+
+    func @1 tf.string_to_hash_bucket_strong
+
+        Calculate time is 10.792249918s
+        Conflict nums is 5374508
+        Conflict rate is 0.591439008748
 
     func @2 pino_hash_op
 
@@ -175,11 +187,17 @@ exp @3
     Hash size is 16777216
     HASH_SIZE / NUMS_RANDOM_STR is 1.84625271757
 
-    func @1 tf.string_to_hash_bucket_fast
+    func @0 tf.string_to_hash_bucket_fast
 
         Calculate time is 12.0596909523s
         Conflict nums is 2076187
         Conflict rate is 0.228474491294
+
+    func @1 tf.string_to_hash_bucket_strong
+
+        Calculate time is 10.9286429882s
+        Conflict nums is 2077043
+        Conflict rate is 0.228568690017
 
     func @2 pino_hash_op
 
@@ -213,11 +231,17 @@ exp @4
     Hash size is 67108864
     HASH_SIZE / NUMS_RANDOM_STR is 7.38501087027
 
-    func @1 tf.string_to_hash_bucket_fast
+    func @0 tf.string_to_hash_bucket_fast
 
         Calculate time is 11.1568741798s
         Conflict nums is 596695
         Conflict rate is 0.0656634429281
+
+    func @1 tf.string_to_hash_bucket_strong
+
+        Calculate time is 12.7320871353s
+        Conflict nums is 597377
+        Conflict rate is 0.06573849378
 
     func @2 pino_hash_op
 
@@ -251,11 +275,17 @@ exp @5
     Hash size is 268435456
     HASH_SIZE / NUMS_RANDOM_STR is 29.5400434811
 
-    func @1 tf.string_to_hash_bucket_fast
+    func @0 tf.string_to_hash_bucket_fast
 
         Calculate time is 11.0579340458s
         Conflict nums is 161478
         Conflict rate is 0.0177698848443
+
+    func @1 tf.string_to_hash_bucket_strong
+
+        Calculate time is 11.0191509724s
+        Conflict nums is 162140
+        Conflict rate is 0.0178427347914
 
     func @2 pino_hash_op
 
@@ -289,11 +319,17 @@ exp @7
     Hash size is 536870912
     HASH_SIZE / NUMS_RANDOM_STR is 59.0800869621
 
-    func @1 tf.string_to_hash_bucket_fast
+    func @0 tf.string_to_hash_bucket_fast
 
         Calculate time is 11.490858078s
         Conflict nums is 86497
         Conflict rate is 0.00951858289906
+
+    func @1 tf.string_to_hash_bucket_strong
+
+        Calculate time is 10.9801001549s
+        Conflict nums is 86787
+        Conflict rate is 0.0095504960179
 
     func @2 pino_hash_op
 
@@ -327,11 +363,17 @@ exp @8
     Hash size is 1073741824
     HASH_SIZE / NUMS_RANDOM_STR is 118.160173924
 
-    func @1 tf.string_to_hash_bucket_fast
+    func @0 tf.string_to_hash_bucket_fast
 
         Calculate time is 13.1547999382s
         Conflict nums is 48528
         Conflict rate is 0.00534027528036
+
+    func @1 tf.string_to_hash_bucket_strong
+
+        Calculate time is 12.2062988281s
+        Conflict nums is 48701
+        Conflict rate is 0.00535931310643
 
     func @2 pino_hash_op
 
@@ -343,9 +385,9 @@ exp @8
 
         @BKDRHash
 
-            Calculate time is 11.9726400375s
-            Conflict nums is 86631
-            Conflict rate is 0.00953332896087
+            Calculate time is 10.8694009781s
+            Conflict nums is 48868
+            Conflict rate is 0.00537769066108
 
         @SDBMHash
         @RSHash

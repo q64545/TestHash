@@ -1,7 +1,8 @@
 """
 Test the performance of different hash method
 methods:
-	@hash_method1 tf.string_to_hash_bucket_fast
+	@hash_method0 tf.string_to_hash_bucket_fast
+	@hash_method1 tf.string_to_hash_bucket_strong
 	@hash_method2 pino_hash_op
 	@hash_method2 basic_hash_op include BKDRHash,SDBMHash,RSHash,APHash,JSHash,DEKHash,FNVHash,DJBHash,DJB2Hash,PJWHash,ELFHash,JAVAHash
 Considered:
@@ -12,7 +13,7 @@ from __future__ import absolute_import  # absolute import
 from __future__ import division         # accurate div
 from __future__ import print_function   # new print func
 
-from tensorflow.python.ops.gen_string_ops import string_to_hash_bucket_fast
+from tensorflow.python.ops.gen_string_ops import string_to_hash_bucket_fast, string_to_hash_bucket_strong
 from tensorflow.python.client.session import Session
 from tensorflow.python.ops.array_ops import placeholder
 from tensorflow.python.framework.dtypes import string as tf_string
@@ -22,22 +23,22 @@ import argparse
 import time
 
 
-
-
 RANDOM_STRING_FILE = "random_str/ascii_random_str"
-HASH_SIZE = 2**30
+HASH_SIZE = 2**20
 BATCH_SIZE = 200
 
 
-def hash_method1(**kwargs):
-	return string_to_hash_bucket_fast(**kwargs)
+def hash_method0(*args, **kwargs):
+	return string_to_hash_bucket_fast(*args, **kwargs)
 
-def hash_method2(**kwargs):
-	return pino_hash_op(**kwargs)
+def hash_method1(*args, **kwargs):
+	return string_to_hash_bucket_strong(key=[131,242356345], *args, **kwargs)
 
-def hash_method3(**kwargs):
-	return basic_hash_op(**kwargs)
+def hash_method2(*args, **kwargs):
+	return pino_hash_op(*args, **kwargs)
 
+def hash_method3(*args, **kwargs):
+	return basic_hash_op(*args, **kwargs)
 
 def test_hash(hash_func):
 	# random_str = generate_random_ascii_str()
@@ -78,12 +79,15 @@ def test_hash(hash_func):
 
 def main():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-f', '--hashFunc', type=int, default=1)
+	parser.add_argument('-f', '--hashFunc', type=int, default=0)
 	args = parser.parse_args()
 	hash_func_type = args.hashFunc
 	hash_func = None
-	if hash_func_type == 1:
+	if hash_func_type == 0:
 		print("Using tf.string_to_hash_bucket_fast")
+		hash_func = hash_method0
+	elif hash_func_type == 1:
+		print("Using tf.string_to_hash_bucket_strong")
 		hash_func = hash_method1
 	elif hash_func_type == 2:
 		print("Using pino_hash_op")
