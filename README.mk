@@ -16,13 +16,7 @@ exp @1
         Conflict nums is 8038816
         Conflict rate is 0.884633415104
 
-    func @2 pino_hash_op
-
-        Calculate time is 12.8425891399s
-        Conflict nums is 8038002
-        Conflict rate is 0.884622203792
-
-    func @3 basic_hash_op
+    func @2 basic_hash_op
 
         @BKDRHash
             Calculate time is 12.0634701252s
@@ -102,13 +96,7 @@ exp @2
         Conflict nums is 5374508
         Conflict rate is 0.591439008748
 
-    func @2 pino_hash_op
-
-        Calculate time is 11.3727741241s
-        Conflict nums is 5374926
-        Conflict rate is 0.591537409836
-
-    func @3 basic_hash_op
+    func @2 basic_hash_op
 
         @BKDRHash
             Calculate time is 12.016065836s
@@ -199,13 +187,7 @@ exp @3
         Conflict nums is 2077043
         Conflict rate is 0.228568690017
 
-    func @2 pino_hash_op
-
-        Calculate time is 12.4651830196s
-        Conflict nums is 2077968
-        Conflict rate is 0.228670481862
-
-    func @3 basic_hash_op
+    func @2 basic_hash_op
 
         @BKDRHash
 
@@ -243,13 +225,7 @@ exp @4
         Conflict nums is 597377
         Conflict rate is 0.06573849378
 
-    func @2 pino_hash_op
-
-        Calculate time is 11.0531711578s
-        Conflict nums is 599310
-        Conflict rate is 0.0659512112239
-
-    func @3 basic_hash_op
+    func @2 basic_hash_op
 
         @BKDRHash
 
@@ -287,13 +263,7 @@ exp @5
         Conflict nums is 162140
         Conflict rate is 0.0178427347914
 
-    func @2 pino_hash_op
-
-        Calculate time is 11.6627979279s
-        Conflict nums is 162792
-        Conflict rate is 0.0179144842862
-
-    func @3 basic_hash_op
+    func @2 basic_hash_op
 
         @BKDRHash
 
@@ -331,13 +301,7 @@ exp @7
         Conflict nums is 86787
         Conflict rate is 0.0095504960179
 
-    func @2 pino_hash_op
-
-        Calculate time is 11.0194218159s
-        Conflict nums is 87232
-        Conflict rate is 0.00959946614854
-
-    func @3 basic_hash_op
+    func @2 basic_hash_op
 
         @BKDRHash
 
@@ -375,13 +339,7 @@ exp @8
         Conflict nums is 48701
         Conflict rate is 0.00535931310643
 
-    func @2 pino_hash_op
-
-        Calculate time is 11.2301700115s
-        Conflict nums is 48995
-        Conflict rate is 0.00539166640623
-
-    func @3 basic_hash_op
+    func @2 basic_hash_op
 
         @BKDRHash
 
